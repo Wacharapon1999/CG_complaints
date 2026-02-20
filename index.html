@@ -27,7 +27,7 @@
     overflow: hidden;
   }
 
-  /* เพิ่มลายน้ำวงกลมบางๆ ด้านหลังเพื่อให้ดูมีมิติ */
+  /* ลายน้ำวงกลมด้านหลัง */
   .complaints-container::after {
     content: "";
     position: absolute;
@@ -48,7 +48,6 @@
     z-index: 1;
   }
 
-  /* ฝั่งซ้าย: รูปภาพอินโฟกราฟิก */
   .image-side {
     flex: 1.2;
   }
@@ -72,7 +71,6 @@
     display: block;
   }
 
-  /* ฝั่งขวา: ข้อความและปุ่ม */
   .text-side {
     flex: 1;
     color: white;
@@ -110,11 +108,10 @@
     color: rgba(255, 255, 255, 0.9);
   }
 
-  /* ดีไซน์ปุ่มใหม่ */
   .btn-action {
     display: inline-flex;
     align-items: center;
-    background-color: #e31e24; /* สีแดงเดิมแต่ปรับให้ดูพรีเมียมขึ้น */
+    background-color: #e31e24; 
     color: white;
     text-decoration: none;
     font-family: 'Kanit', sans-serif;
@@ -141,10 +138,9 @@
     transform: translateX(5px);
   }
 
-  /* Responsive */
   @media (max-width: 950px) {
     .wrapper {
-      flex-direction: column-reverse; /* เอารูปภาพไว้ด้านบนในมือถือ */
+      flex-direction: column-reverse;
       text-align: center;
       gap: 40px;
     }
@@ -183,7 +179,7 @@
           ท่านสามารถแจ้งข้อร้องเรียนหรือแจ้งเบาะแสเกี่ยวกับพฤติกรรมที่ผิดปกติ หรือการกระทำที่ฝ่าฝืนนโยบายบริษัทฯ และกฎหมาย โดยบริษัทฯ จะรักษาข้อมูลของท่านไว้เป็น <strong>"ความลับสูงสุด"</strong>
         </p>
 
-        <a href="https://haadthipo365.sharepoint.com/:u:/s/RMCGConnect/IQAPk6QO5DcsSY0fhqUeqzghAQ6J4Oq7UayF3kySNF5mqBA?e=WccFPM" target="_top" class="btn-action">
+        <a href="http://whistleblower.haadthip.com/" target="_top" class="btn-action">
           อ่านรายละเอียดเพิ่มเติม
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
         </a>
