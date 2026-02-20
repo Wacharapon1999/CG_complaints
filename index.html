@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Complaints Channel Section</title>
+<title>Complaints Channel Section (White BG)</title>
 <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@700;800&family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
@@ -14,9 +14,9 @@
     background-color: transparent;
   }
 
-  /* คอนเทนเนอร์หลักสีเขียว #007947 */
+  /* คอนเทนเนอร์หลักสีขาว */
   .complaints-container {
-    background-color: #007947;
+    background-color: #ffffff; /* เปลี่ยนเป็นสีขาว */
     min-height: 450px;
     display: flex;
     align-items: center;
@@ -25,15 +25,19 @@
     box-sizing: border-box;
     position: relative;
     overflow: hidden;
+    /* เพิ่มเส้นขอบเขตด้านบนล่างบางๆ เพื่อแบ่งสัดส่วนจากเนื้อหาอื่น */
+    border-top: 1px solid #eaeaea;
+    border-bottom: 1px solid #eaeaea;
   }
 
-  /* ลายน้ำวงกลมด้านหลัง */
+  /* ลายน้ำวงกลมด้านหลัง (เปลี่ยนเป็นสีเขียวจางๆ) */
   .complaints-container::after {
     content: "";
     position: absolute;
     width: 400px;
     height: 400px;
-    background: rgba(255, 255, 255, 0.03);
+    /* เปลี่ยนจากขาวจางๆ เป็นเขียวจางๆ */
+    background: rgba(0, 121, 71, 0.05);
     border-radius: 50%;
     bottom: -150px;
     right: -100px;
@@ -52,32 +56,36 @@
     flex: 1.2;
   }
 
+  /* ปรับกล่องรูปภาพให้เข้ากับพื้นขาว */
   .graphic-card {
-    background: white;
-    padding: 12px;
+    background: transparent; /* ไม่ต้องมีพื้นหลังขาวซ้อนแล้ว */
+    padding: 0; /* เอา padding ออก */
     border-radius: 20px;
-    box-shadow: 0 25px 50px rgba(0,0,0,0.25);
+    /* ปรับเงาให้ดูนุ่มขึ้นบนพื้นขาว */
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
     transition: transform 0.4s ease;
   }
   
   .graphic-card:hover {
     transform: scale(1.02);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.15);
   }
 
   .graphic-card img {
     width: 100%;
     height: auto;
-    border-radius: 12px;
+    border-radius: 20px; /* ปรับขอบมนให้เข้ากับกล่อง */
     display: block;
   }
 
   .text-side {
     flex: 1;
-    color: white;
+    color: #333333; /* เปลี่ยนสีข้อความรวมเป็นสีเทาเข้ม */
   }
 
   .header-box {
-    border-left: 6px solid #ffffff;
+    /* เปลี่ยนเส้นขีดด้านหน้าเป็นสีเขียวองค์กร */
+    border-left: 6px solid #007947;
     padding-left: 25px;
     margin-bottom: 25px;
   }
@@ -89,14 +97,15 @@
     margin: 0;
     line-height: 1;
     letter-spacing: -1px;
+    color: #007947; /* เปลี่ยนหัวข้อเป็นสีเขียว */
   }
 
   .sub-title {
     font-family: 'Kanit', sans-serif;
     font-size: 24px;
-    font-weight: 300;
+    font-weight: 400; /* เพิ่มความหนานิดนึงให้อ่านง่ายบนพื้นขาว */
     margin: 8px 0 0 0;
-    opacity: 0.95;
+    color: #555555; /* สีเทากลาง */
   }
 
   .info-text {
@@ -105,9 +114,16 @@
     font-weight: 400;
     line-height: 1.7;
     margin-bottom: 35px;
-    color: rgba(255, 255, 255, 0.9);
+    color: #666666; /* สีเทาอ่านง่าย */
+  }
+  
+  /* เน้นคำว่า ความลับสูงสุด ให้เด่นขึ้น */
+  .info-text strong {
+      color: #007947;
+      font-weight: 600;
   }
 
+  /* ปุ่มสีแดง (เหมือนเดิม เด่นดีอยู่แล้วบนพื้นขาว) */
   .btn-action {
     display: inline-flex;
     align-items: center;
@@ -146,7 +162,8 @@
     }
     .header-box {
       border-left: none;
-      border-bottom: 4px solid white;
+      /* เปลี่ยนเส้นขีดด้านล่างในมือถือเป็นสีเขียว */
+      border-bottom: 4px solid #007947;
       padding-left: 0;
       padding-bottom: 15px;
       display: inline-block;
