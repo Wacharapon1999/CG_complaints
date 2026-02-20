@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Complaints Channel Section</title>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@700;800&family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Figtree', 'Kanit', sans-serif;
+    background-color: transparent;
+  }
+
+  /* คอนเทนเนอร์หลักสีเขียว #007947 */
+  .complaints-container {
+    background-color: #007947;
+    min-height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 60px;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* เพิ่มลายน้ำวงกลมบางๆ ด้านหลังเพื่อให้ดูมีมิติ */
+  .complaints-container::after {
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 50%;
+    bottom: -150px;
+    right: -100px;
+  }
+
+  .wrapper {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    z-index: 1;
+  }
+
+  /* ฝั่งซ้าย: รูปภาพอินโฟกราฟิก */
+  .image-side {
+    flex: 1.2;
+  }
+
+  .graphic-card {
+    background: white;
+    padding: 12px;
+    border-radius: 20px;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.25);
+    transition: transform 0.4s ease;
+  }
+  
+  .graphic-card:hover {
+    transform: scale(1.02);
+  }
+
+  .graphic-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+  }
+
+  /* ฝั่งขวา: ข้อความและปุ่ม */
+  .text-side {
+    flex: 1;
+    color: white;
+  }
+
+  .header-box {
+    border-left: 6px solid #ffffff;
+    padding-left: 25px;
+    margin-bottom: 25px;
+  }
+
+  .main-title {
+    font-family: 'Figtree', sans-serif;
+    font-size: 52px;
+    font-weight: 800;
+    margin: 0;
+    line-height: 1;
+    letter-spacing: -1px;
+  }
+
+  .sub-title {
+    font-family: 'Kanit', sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    margin: 8px 0 0 0;
+    opacity: 0.95;
+  }
+
+  .info-text {
+    font-family: 'Kanit', sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.7;
+    margin-bottom: 35px;
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  /* ดีไซน์ปุ่มใหม่ */
+  .btn-action {
+    display: inline-flex;
+    align-items: center;
+    background-color: #e31e24; /* สีแดงเดิมแต่ปรับให้ดูพรีเมียมขึ้น */
+    color: white;
+    text-decoration: none;
+    font-family: 'Kanit', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 14px 35px;
+    border-radius: 50px;
+    box-shadow: 0 10px 20px rgba(227, 30, 36, 0.3);
+    transition: all 0.3s ease;
+  }
+
+  .btn-action:hover {
+    background-color: #ff2a30;
+    transform: translateY(-3px);
+    box-shadow: 0 15px 25px rgba(227, 30, 36, 0.4);
+  }
+
+  .btn-action svg {
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .btn-action:hover svg {
+    transform: translateX(5px);
+  }
+
+  /* Responsive */
+  @media (max-width: 950px) {
+    .wrapper {
+      flex-direction: column-reverse; /* เอารูปภาพไว้ด้านบนในมือถือ */
+      text-align: center;
+      gap: 40px;
+    }
+    .header-box {
+      border-left: none;
+      border-bottom: 4px solid white;
+      padding-left: 0;
+      padding-bottom: 15px;
+      display: inline-block;
+    }
+    .complaints-container {
+      padding: 50px 20px;
+    }
+    .main-title { font-size: 40px; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="complaints-container">
+    <div class="wrapper">
+      
+      <div class="image-side">
+        <div class="graphic-card">
+          <img src="complaints-graphic.png" alt="5 ช่องทางการแจ้งเบาะแส">
+        </div>
+      </div>
+
+      <div class="text-side">
+        <div class="header-box">
+          <h1 class="main-title">Complaints Channel</h1>
+          <p class="sub-title">ช่องทางการร้องเรียนหรือแจ้งเบาะแส</p>
+        </div>
+        
+        <p class="info-text">
+          ท่านสามารถแจ้งข้อร้องเรียนหรือแจ้งเบาะแสเกี่ยวกับพฤติกรรมที่ผิดปกติ หรือการกระทำที่ฝ่าฝืนนโยบายบริษัทฯ และกฎหมาย โดยบริษัทฯ จะรักษาข้อมูลของท่านไว้เป็น <strong>"ความลับสูงสุด"</strong>
+        </p>
+
+        <a href="https://haadthipo365.sharepoint.com/:u:/s/RMCGConnect/IQAPk6QO5DcsSY0fhqUeqzghAQ6J4Oq7UayF3kySNF5mqBA?e=WccFPM" target="_top" class="btn-action">
+          อ่านรายละเอียดเพิ่มเติม
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
